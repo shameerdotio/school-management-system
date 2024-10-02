@@ -1,8 +1,11 @@
+import Announcements from "@/components/Announcements/Announcements";
 import CardWrapper from "@/components/CardWrapper/CardWrapper";
 import { Barchart } from "@/components/Charts/BarChart";
 import { Linechart } from "@/components/Charts/LineChart";
 import { RadialChart } from "@/components/Charts/RadialChart";
 import EventCalender from "@/components/EventCalender/EventCalender";
+import Events from "@/components/Events/Events";
+import { Separator } from "@/components/ui/separator";
 import React from "react";
 
 const page = () => {
@@ -26,8 +29,12 @@ const page = () => {
         </div>
       </div>
       {/* events */}
-      <div className="w-full md:w-1/3">
+      <div className="rounded-xl w-full md:w-1/3 bg-card shadow-d h-max">
         <EventCalender />
+        <Separator />
+        <Events />
+        <Separator />
+        <Announcements />
       </div>
     </div>
   );

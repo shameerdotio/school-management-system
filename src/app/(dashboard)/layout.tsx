@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <div className="h-screen flex">
       {/* side bar */}
-      <div className="h-screen overflow-y-auto p-4 w-[16%] md:w-[10%] lg:w-[18%] xl:w-[16%] dark:bg-gradient-to-tr from-card to-secondary rounded-lg">
+      <div className="h-screen overflow-y-auto px-[2px] py-4 lg:p-4 w-[20%] md:w-[10%] lg:w-[18%] xl:w-[16%] dark:bg-gradient-to-tr from-card to-secondary">
         <Sidebar />
       </div>
       {/* children */}

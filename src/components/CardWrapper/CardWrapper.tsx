@@ -1,5 +1,5 @@
 import React from "react";
-import InfoCard from "../Card/Card";
+import InfoCard from "../Cards/Card";
 
 const cardsInfo = [
   { type: "Students", total: 1231 },

@@ -67,21 +67,21 @@ export function RadialChart() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex gap-2 items-center">
-          <div className="contents">
+        <div className="w-full flex gap-2 justify-between">
+          <div className="flex flex-col items-center">
             <div className="bg-chart-1 w-10 h-5 inline-block"></div>
             <span>Total</span>
           </div>
-          <div className="contents">
+          <div className="flex flex-col items-center">
             <div className="bg-chart-4 w-10 h-5 inline-block"></div>
             <span>Boys</span>
           </div>
-          <div className="contents">
+          <div className="flex flex-col items-center">
             <div className="bg-chart-3 w-10 h-5 inline-block"></div>
             <span>Girls</span>
           </div>
         </div>
-        <div className="leading-none text-muted-foreground">
+        <div className="leading-none text-center text-muted-foreground">
           Showing total students for the last 6 months
         </div>
       </CardFooter>

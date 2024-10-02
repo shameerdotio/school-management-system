@@ -10,7 +10,7 @@ const EventCalender = () => {
       mode="single"
       selected={date}
       onSelect={setDate}
-      className="w-full rounded-lg border border-black"
+      className="w-full"
     />
   );
 };
