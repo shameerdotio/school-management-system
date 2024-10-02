@@ -333,54 +333,44 @@ export const parentsData = [
 
 export const subjectsData = [
   {
-    id: 1,
-    name: "Math",
-    teachers: ["Alice Phelps", "Russell Davidson"],
+    label: "Math",
+    value: "Math",
   },
   {
-    id: 2,
-    name: "English",
-    teachers: ["Manuel Becker", "Eddie Chavez"],
+    label: "English",
+    value: "English",
   },
   {
-    id: 3,
-    name: "Physics",
-    teachers: ["Lola Newman", "Darrell Delgado"],
+    label: "Physics",
+    value: "Physics",
   },
   {
-    id: 4,
-    name: "Chemistry",
-    teachers: ["Nathan Kelly", "Benjamin Snyder"],
+    label: "Chemistry",
+    value: "Chemistry",
   },
   {
-    id: 5,
-    name: "Biology",
-    teachers: ["Alma Benson", "Lina Collier"],
+    label: "Biology",
+    value: "Biology",
   },
   {
-    id: 6,
-    name: "History",
-    teachers: ["Hannah Bowman", "Betty Obrien"],
+    label: "History",
+    value: "History",
   },
   {
-    id: 7,
-    name: "Geography",
-    teachers: ["Lora French", "Sue Brady"],
+    label: "Geography",
+    value: "Geography",
   },
   {
-    id: 8,
-    name: "Art",
-    teachers: ["Harriet Alvarado", "Mayme Keller"],
+    label: "Art",
+    value: "Art",
   },
   {
-    id: 9,
-    name: "Music",
-    teachers: ["Gertrude Roy", "Rosa Singleton"],
+    label: "Music",
+    value: "Music",
   },
   {
-    id: 10,
-    name: "Literature",
-    teachers: ["Effie Lynch", "Brett Flowers"],
+    label: "Literature",
+    value: "Literature",
   },
 ];
 
@@ -1135,6 +1125,4 @@ export const calendarEvents = [
     start: new Date(2024, 9, 11, 14, 0),
     end: new Date(2024, 9, 11, 14, 45),
   },
-
-  
 ];

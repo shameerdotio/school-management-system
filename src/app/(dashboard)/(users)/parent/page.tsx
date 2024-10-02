@@ -9,9 +9,9 @@ const page = () => {
   return (
     <div className="py-5 w-full flex gap-4 flex-col md:flex-row">
       {/* left  */}
-      <div className="p-4 w-full bg-card rounded-xl shadow-d md:w-2/3 max-h-[800px]">
-        <h2 className="font-semibold text-xl">Schedule</h2>
-        {/* <BigCalendar /> */}
+      <div className="p-4 w-full bg-card rounded-xl shadow-d md:w-2/3 ">
+        <h2 className="font-semibold text-xl">Schedule (John Doe)</h2>
+        <BigCalendar />
       </div>
       {/* events */}
       <div className="rounded-xl w-full md:w-1/3 bg-card shadow-d h-max">

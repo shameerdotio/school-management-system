@@ -6,12 +6,15 @@ import React, { useEffect, useState } from "react";
 import { Separator } from "../ui/separator";
 
 const Menu = () => {
-  const [path, setPath] = useState<string>("");
+  const [user, setUser] = useState<string>("");
   const pathname = usePathname();
 
   useEffect(() => {
-    setPath(pathname.split("/")[1]);
-  }, []);
+    const user = localStorage.getItem("user");
+    if (user) {
+      setUser(JSON.parse(user));
+    }
+  });
 
   return (
     <div className="flex flex-col">
@@ -27,7 +30,7 @@ const Menu = () => {
           <div className="flex flex-col">
             {/* listing links */}
             {item.items.map((link) =>
-              link.visible.includes(path) ? (
+              link.visible.includes(user) ? (
                 <Link
                   key={link.label}
                   href={link.href}

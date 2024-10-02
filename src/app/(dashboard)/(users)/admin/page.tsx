@@ -18,7 +18,7 @@ const page = () => {
         {/* charts */}
         <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4 py-4">
           <div className="md:w-full lg:w-1/2 xl:w-1/3">
-            <RadialChart />
+            <RadialChart total={500} male={300} female={200} />
           </div>
           <div className="md:w-full lg:w-1/2 xl:w-2/3">
             <Barchart />

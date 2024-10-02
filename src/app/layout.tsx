@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/Theme/theme-provider";
-import { ThemeToggle } from "@/components/Theme/theme-toggle";
 
 export const metadata: Metadata = {
   title: "School Management System",
@@ -28,9 +27,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="fixed bottom-5 right-5">
-            <ThemeToggle />
-          </div>
           {children}
         </ThemeProvider>
       </body>

@@ -20,19 +20,27 @@ import {
 
 export const description = "A radial chart with a label";
 
-const chartData = [
-  { count: "Total", students: 475, fill: "hsl(var(--chart-1))" },
-  { count: "Boys", students: 275, fill: "hsl(var(--chart-4))" },
-  { count: "Girls", students: 200, fill: "hsl(var(--chart-3))" },
-];
-
 const chartConfig = {
   students: {
     label: "Students",
   },
 } satisfies ChartConfig;
 
-export function RadialChart() {
+export function RadialChart({
+  total,
+  male,
+  female,
+}: {
+  total: number;
+  male: number;
+  female: number;
+}) {
+  const chartData = [
+    { count: "Total", students: total, fill: "hsl(var(--chart-1))" },
+    { count: "Male", students: male, fill: "hsl(var(--chart-4))" },
+    { count: "Female", students: female, fill: "hsl(var(--chart-3))" },
+  ];
+
   return (
     <Card className="flex flex-col w-full h-full">
       <CardHeader className="items-center pb-0">
@@ -74,11 +82,11 @@ export function RadialChart() {
           </div>
           <div className="flex flex-col items-center">
             <div className="bg-chart-4 w-10 h-5 inline-block"></div>
-            <span>Boys</span>
+            <span>Male</span>
           </div>
           <div className="flex flex-col items-center">
             <div className="bg-chart-3 w-10 h-5 inline-block"></div>
-            <span>Girls</span>
+            <span>Female</span>
           </div>
         </div>
         <div className="leading-none text-center text-muted-foreground">

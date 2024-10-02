@@ -6,15 +6,16 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "../ui/input";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const [path, setPath] = useState<string>("");
-  const pathname = usePathname();
+  const [user, setUser] = useState<string>("");
 
   useEffect(() => {
-    setPath(pathname.split("/")[1]);
-  }, []);
+    const user = localStorage.getItem("user");
+    if (user) {
+      setUser(JSON.parse(user));
+    }
+  });
 
   return (
     <div className="flex md:justify-between justify-end items-center border-b border-zinc-200/70 dark:border-zinc-300/30 pb-4 w-full">
@@ -29,7 +30,7 @@ const Navbar = () => {
         <Link href="/" className="flex gap-4 cursor-pointer">
           <div className="text-end flex flex-col justify-center items-end">
             <span className="text">John Doe</span>
-            <Badge variant="default">{path.toUpperCase()}</Badge>
+            <Badge variant="default">{user.toUpperCase()}</Badge>
           </div>
           <div>
             <Avatar className="w-14 h-14">
